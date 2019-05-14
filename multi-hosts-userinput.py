@@ -10,19 +10,19 @@ class MyTopo(Topo):
         # user input
         input_num = input("Enter your number hosts.")
         conv_toint = int(input_num)
-        "The number hosts is:" + conv_toint
+        "The number hosts is:" + str(conv_toint)
         hosts = []
         switches = []
-        for i in range(conv_toint):
-            hosts.append(self.addHost('h' + `i`))
+        for i in range(0, conv_toint):
+            hosts.append(self.addHost('h' + str(i)))
             "Hosts added " + hosts[i]
         input_swts = input("Enter number of Switches")
-        swt_toint = int(input_swts)
+        swt_toint = int(0, input_swts)
         for j in range(swt_toint):
-            switches.append(self.addSwitch('s' + `j`))
+            switches.append(self.addSwitch('s' + str(j)))
             "Switch added" + switches[j]
         "Creating links by user"
-        for k in range(swt_toint):
+        for k in range(0, swt_toint):
             "Add the links to each switch."
             "Example: 'h1 -> s1'"
 
