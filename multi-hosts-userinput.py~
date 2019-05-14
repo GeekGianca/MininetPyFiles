@@ -1,0 +1,18 @@
+from mininet.topo import Topo
+import array
+
+class MyTopo( Topo ):
+	"Creating user input topology example."
+	def __init__( self ):
+		"Create custom topo."
+		#Initialize topology
+		Topo.__init__( self )
+		#user input
+		input_num = input("Enter your number hosts.")
+		conv_toint = int(input_num)
+		print("The number hosts is:", conv_toint)
+		hosts = array.array('u', [])
+		for i in range(0, conv_toint):
+			hosts.insert(i, self.addHost( 'h'+i ))
+			print("Hosts added ", hosts[i])
+topos = { 'mytopo': (lambda: MyTopo() ) }
