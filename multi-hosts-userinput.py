@@ -20,13 +20,13 @@ class MyTopo(Topo):
 
         input_swts = input("Enter number of Switches: ")
         swt_toint = int(input_swts)
-        print "Switch added "+str(swt_toint)
+        print "The number switch added is: "+str(swt_toint)
 
         for j in range(swt_toint):
             switches.append(self.addSwitch('s' + `j`))
-            print "Switch added" + switches[j]
+            print "Switch added " + switches[j]
 
-        "Creating links by user"
+        print "Creating links by user"
 
         for k in range(swt_toint):
             print "Add the links to each switch."
